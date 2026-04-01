@@ -4,14 +4,14 @@ export type PaymentIntent = {
   target: string;
   amount: number;
   currency: 'CNY' | 'USD';
-  scene: 'transfer' | 'recharge' | 'settlement';
+  scene: '转账' | '充值' | '结算';
   note: string;
 };
 
 export type FlowStep = {
   name: string;
-  status: 'pending' | 'ready' | 'blocked';
+  status: '待处理' | '就绪' | '阻塞';
   reason: string;
 };
 
-export type RiskLevel = 'low' | 'medium' | 'high';
+export type RiskLevel = '低' | '中' | '高';

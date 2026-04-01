@@ -4,7 +4,7 @@ function main() {
   const requestText = process.argv.slice(2).join(' ').trim() || '请帮我给供应商支付 199 元并完成结算';
   const result = runPaymentDemo(requestText);
 
-  console.log('claude-pay demo cli');
+  console.log('claude-pay 支付流演示');
   console.log('='.repeat(24));
   console.log(`请求: ${requestText}`);
   console.log(`摘要: ${result.summary}`);

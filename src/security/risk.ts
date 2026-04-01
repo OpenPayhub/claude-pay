@@ -2,16 +2,16 @@ import type { PaymentIntent, RiskLevel } from '../types/payment';
 
 export function assessRisk(intent: PaymentIntent): RiskLevel {
   if (intent.amount >= 1000) {
-    return 'high';
+    return '高';
   }
 
   if (intent.amount >= 300) {
-    return 'medium';
+    return '中';
   }
 
-  return 'low';
+  return '低';
 }
 
 export function requiresManualApproval(riskLevel: RiskLevel): boolean {
-  return riskLevel !== 'low';
+  return riskLevel !== '低';
 }

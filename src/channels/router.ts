@@ -1,13 +1,13 @@
 import type { PaymentIntent } from '../types/payment';
 
 export function selectPaymentChannel(intent: PaymentIntent): string {
-  if (intent.scene === 'settlement') {
-    return 'bank-settlement-channel';
+  if (intent.scene === '结算') {
+    return '银行结算通道';
   }
 
   if (intent.amount <= 500) {
-    return 'wallet-fast-lane';
+    return '钱包快捷通道';
   }
 
-  return 'review-required-channel';
+  return '人工复核通道';
 }
