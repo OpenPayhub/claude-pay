@@ -1,0 +1,20 @@
+{
+  "name": "claude-pay",
+  "version": "0.1.0",
+  "description": "Minimal TypeScript HTTP server",
+  "license": "MIT",
+  "packageManager": "pnpm@9.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "check": "tsc --noEmit",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "cli": "ts-node src/cli.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
